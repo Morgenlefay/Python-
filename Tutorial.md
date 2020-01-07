@@ -18,5 +18,7 @@ pip install -r C:\Users\Lenovo-PC\Documents\requirements.txt
 严格区分大小写
 
 不能使用python关键字
+```python
 import keyword
 print(keyword.kwlist)
+```
