@@ -12,3 +12,6 @@ pip freeze > C:\Users\Lenovo-PC\Documents\requirements.txt
 #### 安装环境包
 pip install -r C:\Users\Lenovo-PC\Documents\requirements.txt
 
+## 变量命名规则
+由字母，数字，_组成，不能以数字开头
+
