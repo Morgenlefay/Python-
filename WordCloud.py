@@ -12,7 +12,8 @@ ls = jieba.cut(text) #分词
 txt = " ".join(ls)
 
 stopwords = {'我们':0, '你们':0, '他们':0, '那里':0, '这里':0, '一个':0} #噪声词
-color_mask =imageio.imread("WordCloud/love.jpeg")
+mk =imageio.imread("WordCloud/love.jpeg")
+color_new = wordcloud.ImageColorGenerator(mk)
 
 w = wordcloud.WordCloud()
 w = wordcloud.WordCloud(font_path = 'WordCloud/msyh.ttf',
@@ -20,7 +21,9 @@ w = wordcloud.WordCloud(font_path = 'WordCloud/msyh.ttf',
                         height = 700,
                         stopwords = stopwords,
                         background_color = 'white',
-                        mask = color_mask,
-                        max_words = 500)
+                        contour_color = 'gray',
+                        color_func = color_new,
+                        mask = mk,
+                        max_words = 100)
 w.generate(txt)
 w.to_file("txt.eps")
