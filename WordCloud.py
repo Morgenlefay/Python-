@@ -8,10 +8,10 @@ file = open('WordCloud/红楼梦.txt','rt', encoding = 'utf-8')
 text = file.read()
 file.close()
 
-ls = jieba.lcut(text)
+ls = jieba.lcut(text) #分词
 txt = " ".join(ls)
 
-stopwords = {'我们':0, '你们':0, '他们':0, '那里':0, '这里':0, '一个':0} # 噪声词
+stopwords = {'我们':0, '你们':0, '他们':0, '那里':0, '这里':0, '一个':0} #噪声词
 color_mask =imageio.imread("WordCloud/love.jpeg")
 
 w = wordcloud.WordCloud(font_path = 'WordCloud/msyh.ttf',
